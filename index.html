@@ -5,40 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Event Form</title>
+    <style>
+
+        #main{
+            margin:auto;
+            width: 50%;
+            border: 3px solid black;
+            padding: 30px;
+        }
     
+    </style>    
     <script  src="index.js">
     
     </script>
 </head>
 <body>
-    <h1>Create your Event</h1>
-   <form onsubmit="return validate()">
-    <label>Type of Event: </label>
-    <select id="events" name="Events" value="Choose one: " required>
-        <option value=""></option>
-        <option value="Option">Kid's Birthday Party</option>
-        <option value="Option2">Adult's Birthday Celebration</option>
-        <option value="Option3">Wedding</option>
-        <option value="Option4">Christening</option>
-        <option value="Option5">Baptism</option>
-        </select><br><br>
+    <div id="main">
+        <center><h1>Create your Event</h1></center>
+        <form onsubmit="return validate()">
+            <label>Event Type: </label>
+            <select id="events" name="Events" value="Choose one: " required>
+                <option value="Default">Choose One</option>
+                <option value="Option">Kid's Birthday Party</option>
+                <option value="Option2">Adult's Birthday Celebration</option>
+                <option value="Option3">Wedding</option>
+                <option value="Option4">Christening</option>
+                <option value="Option5">Baptism</option>
+                </select><br><br>
 
-    <label>Name of Event: <input type="text" id="name" required></label><br><br>
+            <label>Event Name: <input type="text" id="name" required></label><br><br>
 
-    <label> Date of Event: </label>
-    <input id="date1" type="date" required> to 
-    <input id="date2" type="date" required><br><br>
+            <label> Event Dates: </label>
+            <input id="date1" type="date" required> 
+            to <input id="date2" type="date" required><br><br>
 
-    <label> When can the preparations start? </label>
-    <input id="prepareDate" type="date" required><br><br>
+            <label> Posting Date </label>
+            <input id="prepareDate" type="date" required><br><br>
+            
+            <input type="checkbox" id="check1">
+            <label> Is Registration Required? </label><br>
 
-    <label> Will it required catering services? </label><input type="checkbox" id="check1"><br>
-    <label> Will the location be provided by you? </label><input type="checkbox" id="check2"><br>
-    <label> Will the registration process be done online? </label><input type="checkbox" id="check3"><br>
-    <label> Is this a Family-only event? </label><input type="checkbox" id="check4"><br>
-
-    <input type="submit" value="Save" onclick="validate()">
-    <input type="reset" value="Clear">
-   </form>
+            <input type="checkbox" id="check2">
+            <label> Is this event associated with any Family Programs? </label><br>
+            
+            <input type="checkbox" id="check3">
+            <label> Is there a Point of Contact? </label><br>
+            
+            <input type="checkbox" id="check4">
+            <label> Is there a Hosting Command Point of Contact? </label><br><br>
+            
+            <center>    
+            <input type="submit" value="Save" onclick="validate()">
+            <input type="reset" value="Clear"> <br><br>
+            </center>
+        </form>
+    </div>
 </body>
 </html>
