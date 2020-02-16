@@ -11,12 +11,34 @@
     </script>
 </head>
 <body>
-   <form onsubmit="return validatePass()">
-        <label>Email: <input type="email" id="email" required ></label><br><br>
-        <label>Password: <input id="pw1" type="text" required></label><br><br>    
-        <label>Confirm Password: <input id="pw2" type="text" required></label> <br><br>
-        <input type="submit" value="Submit to Server">
-        <input type="reset" value="Reset">
+    <h1>Create your Event</h1>
+   <form onsubmit="return validate()">
+    <label>Type of Event: </label>
+    <select id="events" name="Events" value="Choose one: " required>
+        <option value=""></option>
+        <option value="Option">Kid's Birthday Party</option>
+        <option value="Option2">Adult's Birthday Celebration</option>
+        <option value="Option3">Wedding</option>
+        <option value="Option4">Christening</option>
+        <option value="Option5">Baptism</option>
+        </select><br><br>
+
+    <label>Name of Event: <input type="text" id="name" required></label><br><br>
+
+    <label> Date of Event: </label>
+    <input id="date1" type="date" required> to 
+    <input id="date2" type="date" required><br><br>
+
+    <label> When can the preparations start? </label>
+    <input id="prepareDate" type="date" required><br><br>
+
+    <label> Will it required catering services? </label><input type="checkbox" id="check1"><br>
+    <label> Will the location be provided by you? </label><input type="checkbox" id="check2"><br>
+    <label> Will the registration process be done online? </label><input type="checkbox" id="check3"><br>
+    <label> Is this a Family-only event? </label><input type="checkbox" id="check4"><br>
+
+    <input type="submit" value="Save" onclick="validate()">
+    <input type="reset" value="Clear">
    </form>
 </body>
 </html>

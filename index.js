@@ -1,14 +1,23 @@
 
-function validatePass(){
+function validate(){
+
+    let events =  document.getElementById("events").value;
+    let name = document.getElementById("name").value;
+    let startDate = document.getElementById("date1").value;
+    let endDate = document.getElementById("date2").value;
+    let prepareDate = document.getElementById("prepareDate").value 
     
-    let pass1 = document.getElementById("pw1").value;
-    let pass2 = document.getElementById("pw2").value;
-    document.getElementById("email").value = "";
-    if(pass1==pass2){
-        alert("Your Password has been saved.")
+
+
+    if ((events=="")||(name=="")||(startDate=="")||(endDate=="")||(prepareDate=="")){
+
+        alert("You have missed something");
     }else{
-        alert("Incorrect Password");
+        alert("Your event has been saved")
     }
+
+
+    
 }
 
 
